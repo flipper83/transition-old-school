@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="card" parent="card_base">
+        <item name="android:elevation">@dimen/card_elevation</item>
+    </style>
+
+
+</resources>

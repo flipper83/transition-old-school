@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="row_feed_band_title">
+        <item name="android:background">@color/background_row_feed_title</item>
+        <item name="android:textSize">@dimen/font_size_row_feed_title</item>
+        <item name="android:textColor">@color/font_color_row_feed_title</item>
+        <item name="android:padding">@dimen/gap_normal</item>
+    </style>
+
+    <style name="card_base" parent="CardView">
+        <item name="cardCornerRadius">4dp</item>
+        <item name="android:layout_marginBottom">@dimen/gap_normal</item>
+        <item name="android:layout_marginLeft">@dimen/gap_normal</item>
+        <item name="android:layout_marginRight">@dimen/gap_normal</item>
+    </style>
+
+    <style name="card" parent="card_base"/>
+
+</resources>

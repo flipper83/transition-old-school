@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="font_size_row_feed_title"> @dimen/abc_text_size_headline_material </dimen>
+    <dimen name="font_size_detail_contain"> @dimen/abc_text_size_medium_material</dimen>
+
+    <dimen name="gap_normal">12dp</dimen>
+    <dimen name="row_cover_size">200dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+
+    <dimen name="detail_cover_size">350dp</dimen>
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_default_primary_light">#ffff598e</color>
+    <color name="theme_default_primary">#e91e63</color>
+    <color name="theme_default_primary_dark">#c2185b</color>
+    <color name="theme_default_accent">#8f673ab7</color>
+    <color name="theme_default_accent_light">#8f9575cd</color>
+    <color name="theme_default_accent_dark">#8f512da8</color>
+    <color name="theme_background">#f2f2f2</color>
+
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/theme_default_primary</item>
+        <item name="colorPrimaryDark">@color/theme_default_primary_dark</item>
+        <item name="colorAccent">@color/theme_default_accent</item>
+        <item name="colorControlHighlight">@color/theme_default_accent_light</item>
+    </style>
+</resources>

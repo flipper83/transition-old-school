@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="detail_band_title">
+        <item name="android:textSize">@dimen/font_size_row_feed_title</item>
+        <item name="android:padding">@dimen/gap_normal</item>
+    </style>
+
+    <style name="detail_band_content">
+        <item name="android:textSize">@dimen/font_size_detail_contain</item>
+        <item name="android:padding">@dimen/gap_normal</item>
+    </style>
+
+</resources>
