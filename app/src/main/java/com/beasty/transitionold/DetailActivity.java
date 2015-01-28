@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.graphics.Palette;
+import android.transition.Transition;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -18,6 +20,7 @@ public class DetailActivity extends ActionBarActivity {
 
     public static final String EXTRA_TITLE = "extra_title";
     public static final String EXTRA_AVATAR_URL = "extra_avatar";
+    public static final String TRANSITION_AVATAR = "avatar_band";
 
     private String title;
     private String avatarUrl;
@@ -62,8 +65,11 @@ public class DetailActivity extends ActionBarActivity {
         titleView.setText(title);
         contentView.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
 
-        if ((avatarUrl != null) && !avatarUrl.equals("")) {
-            Picasso.with(getBaseContext()).load(avatarUrl)
+        ViewCompat.setTransitionName(coverView, TRANSITION_AVATAR);
+
+
+        if ((avatarUrl != null) && !avatarUrl.equals("") ) {
+            Picasso.with(getBaseContext()).load(avatarUrl).noFade()
                     .into(imageLoaded);
         }
     }

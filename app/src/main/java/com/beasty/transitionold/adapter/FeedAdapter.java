@@ -1,7 +1,11 @@
 package com.beasty.transitionold.adapter;
 
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,7 +79,9 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
             root.setOnClickListener(clickRow);
         }
 
+
         private final View.OnClickListener clickRow = new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 FeedViewModel rowClicked = (FeedViewModel) v.getTag();
@@ -84,7 +90,15 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
                 intent.putExtra(DetailActivity.EXTRA_TITLE, rowClicked.getTitle());
                 intent.putExtra(DetailActivity.EXTRA_AVATAR_URL, rowClicked.getUrlAvatar());
 
-                context.startActivity(intent);
+
+                ActivityOptionsCompat options =
+                        ActivityOptionsCompat.makeSceneTransitionAnimation(
+                                (Activity) context, avatarBandView,
+                                DetailActivity.TRANSITION_AVATAR);
+
+
+                context.startActivity(intent, options.toBundle());
+//                context.startActivity(intent);
             }
         };
     }

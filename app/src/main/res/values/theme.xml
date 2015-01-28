@@ -14,13 +14,18 @@
         <item name="colorControlHighlight">@color/theme_default_accent_light</item>
     </style>
 
+    <style name="AppTheme" parent="BaseAppTheme">
+    </style>
 
-    <style name="DetailTheme" parent="BaseAppTheme">
+    <style name="BaseDetailTheme" parent="BaseAppTheme">
         <item name="actionBarStyle">@style/DetailActionBar</item>
         <item name="windowActionBarOverlay">false</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="DetailTheme" parent="BaseDetailTheme">
     </style>
 
     <style name="DetailActionBar" parent="Widget.AppCompat.Light.ActionBar">
