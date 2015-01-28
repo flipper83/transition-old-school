@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name="com.beasty.transitionold.DetailActivity"
+            android:theme="@style/DetailTheme"
             android:label="@string/title_activity_detail" >
         </activity>
     </application>
