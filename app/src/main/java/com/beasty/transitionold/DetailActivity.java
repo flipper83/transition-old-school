@@ -20,7 +20,9 @@ public class DetailActivity extends ActionBarActivity {
 
     public static final String EXTRA_TITLE = "extra_title";
     public static final String EXTRA_AVATAR_URL = "extra_avatar";
+    public static final String EXTRA_ID = "extra_id";
     public static final String TRANSITION_AVATAR = "avatar_band";
+    public static final String TRANSITION_TITLE = "title_band";
 
     private String title;
     private String avatarUrl;
@@ -65,6 +67,7 @@ public class DetailActivity extends ActionBarActivity {
 
     private void initValue() {
         ViewCompat.setTransitionName(coverView, TRANSITION_AVATAR);
+        ViewCompat.setTransitionName(titleView, TRANSITION_TITLE);
 
         titleView.setText(title);
         contentView.setText(desc[id]);

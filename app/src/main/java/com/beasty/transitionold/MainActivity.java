@@ -1,11 +1,9 @@
 package com.beasty.transitionold;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.beasty.transitionold.adapter.FeedAdapter;
 import com.beasty.transitionold.view.model.FeedViewModel;
@@ -39,8 +37,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void refreshAdapter() {
-        if(feedAdapter == null){
-            feedAdapter = new FeedAdapter(initValues(),getBaseContext());
+        if (feedAdapter == null) {
+            feedAdapter = new FeedAdapter(initValues(), getBaseContext());
 
             feedBandList.setHasFixedSize(true);
 

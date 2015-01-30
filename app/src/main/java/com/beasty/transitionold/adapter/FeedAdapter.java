@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -91,15 +92,20 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
                 intent.putExtra(DetailActivity.EXTRA_AVATAR_URL, rowClicked.getUrlAvatar());
                 intent.putExtra(DetailActivity.EXTRA_ID, rowClicked.getId());
 
+                Pair<View, String> pairImage = Pair.create((View) avatarBandView,
+                        DetailActivity.TRANSITION_AVATAR);
 
-                ActivityOptionsCompat options =
-                        ActivityOptionsCompat.makeSceneTransitionAnimation(
-                                (Activity) context, avatarBandView,
-                                DetailActivity.TRANSITION_AVATAR);
+                Pair<View, String> pairTitle =
+                        Pair.create((View) titleBandView, DetailActivity.TRANSITION_TITLE);
 
+
+                Pair<View, String>[] pairs = new Pair[]{pairImage, pairTitle};
+
+                //TODO MOVE THIS CODE TO A DELEGATE, THIS CAST IS EVIL
+                ActivityOptionsCompat options = ActivityOptionsCompat.
+                        makeSceneTransitionAnimation((Activity) context, pairs);
 
                 context.startActivity(intent, options.toBundle());
-//                context.startActivity(intent);
             }
         };
     }
