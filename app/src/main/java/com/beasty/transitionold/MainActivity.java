@@ -85,7 +85,7 @@ public class MainActivity extends ActionBarActivity {
         List<FeedViewModel> values = new ArrayList<>();
 
         for (int i = 0; i < bands.length; i++) {
-            FeedViewModel feedViewModel = new FeedViewModel(bands[i],avatars[i]);
+            FeedViewModel feedViewModel = new FeedViewModel(bands[i], avatars[i],i);
             values.add(feedViewModel);
         }
 

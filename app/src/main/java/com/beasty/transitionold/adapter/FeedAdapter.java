@@ -89,6 +89,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
                 Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra(DetailActivity.EXTRA_TITLE, rowClicked.getTitle());
                 intent.putExtra(DetailActivity.EXTRA_AVATAR_URL, rowClicked.getUrlAvatar());
+                intent.putExtra(DetailActivity.EXTRA_ID, rowClicked.getId());
 
 
                 ActivityOptionsCompat options =
